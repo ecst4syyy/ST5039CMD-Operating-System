@@ -45,4 +45,6 @@ Finally, all of the object files are combined together (***what do I mean by all
 Just look at the first image in this documentation. That's what our final executable is.
 `gcc one.c -o one`
 
-
+## Author
+Student name - **Gaurav Poudel**
+Class - **Programming & Operating System**
