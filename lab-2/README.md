@@ -10,11 +10,11 @@ This lab contains the program files and understand how OS manages the process an
 
 In this lab, we'll understand the concept of PID and practically demonstrate how process ID can be seen while process is actually running in the background. 
 
-![Running-Process](../images/lab-1.png)
+![Running-Process](../Lecture-3/images/lab-1.png)
 
 Above it can be noticed that process is running and exited successfully, meanwhile we will verify it with `ps aux | grep 'task1'`
 
-![](../images/lab-2.png)
+![](../Lecture-3/images/lab-2.png)
 
 - PID : 50871 (assigned to the `task1` process)
 
