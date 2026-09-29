@@ -1,6 +1,7 @@
-# Lab 3 - Investigating Process Lifecycles and OS Interaction
- 
-This lab contains the program files, lab instructions, and notes on process lifecycle and OS interaction with the help of C program.
+# Lab 2 - Investigating Process Lifecycles and OS Interaction
+
+## Overview
+In this lab, we will understand how OS keeps track of PIDs and PPIDs, exit codes and its importance, standard input (stdin) and standard output (stdout) stream for OS to read/write output and input respectively, and lastly conditional branching based on user input and exit codes.
 
 ## Learning Objectives
 1. Explain how OS keeps track of PIDs and PPIDs
