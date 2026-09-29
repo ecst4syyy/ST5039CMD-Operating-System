@@ -85,8 +85,9 @@ In the figure above, exit codes are verified with `echo $?` commands because eve
 ### Concept
 This task shows that OS provides two different streams i.e. `stdin and stdout`. It is a communication channel that OS provides to computer program so that it can send and receive data.
 
->*stdin*: This is a input stream where a program reads data.
->*stdout*: This is a output stream where a program writes data.
+>***stdin***: This is a input stream where a program reads data.
+
+>***stdout***: This is a output stream where a program writes data.
 
 ### Commands
 ```bash
@@ -101,3 +102,25 @@ gcc task4_input.c -o task4
 ![input-output-stream](../Lecture-3/images/lab-5.png)
 
 As I have already explain enough about input and output streams above. So lets talk about the image above, where it asks for a name i.e. **stdin** and outputs it as a string i.e. **stdout**
+
+## Task 5: Conditional Execution and Termination
+
+### Concept
+This task shows that program takes different paths based on **user input** and what is its exit codes. This is important because if there's automated script or pipeline where exit codes from previous operation determine whether the pipeline/script should continue or halt.
+
+### Commands
+```bash
+# Compile the source code
+gcc task5_control.c -o task5
+
+# Run the program
+./task5
+
+# Verify it
+echo $? 
+```
+
+### Evidences
+![conditional-execution](../Lecture-3/images/lab-6.png)
+
+As it can noticed that when input `1` is passed, it does continue and return the exit code of `0` (success), in contrast, when the input is `anything other than 1` it simply exits and returns the exit code `1` (failure). This is how automated pipelines/script can be controlled based on user input and exit codes.
