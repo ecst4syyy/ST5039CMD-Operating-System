@@ -60,3 +60,22 @@ ps -p [PID] -o pid,ppid,command
 Above it is verified that both PID and PPID are identical when `getpid()` retrieves it and when we check it against the output of `ps` command
 
 ## Task 3: Exit Codes & OS Feedbacks
+When program completes what it was supposed to do, it returns a integer value to **OS** via `main()` making sure if the program succeeded or failed. `0` refers to that program successfully completed and `any non-zero value` refers to failure. This is important because in many cases we use return values to determine if it should be continued or abort (we also do branching based on return values sometimes *more on that later*).
+
+>*Definition*: Exit Codes basically is a integer value that determine success or failure.
+
+### Commands
+```bash
+# Compile the source code
+gcc task3_exit.c -o task3
+
+# Run the program
+./task3
+
+# Verify it
+echo $?
+```
+### Evidences
+![exit-code](../Lecture-3/images/lab-4.png)
+
+In the figure above, exit codes are verified with `echo $?` commands because everytime the program finishes running, it stores the return value to `$?`
