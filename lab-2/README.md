@@ -79,3 +79,25 @@ echo $?
 ![exit-code](../Lecture-3/images/lab-4.png)
 
 In the figure above, exit codes are verified with `echo $?` commands because everytime the program finishes running, it stores the return value to `$?`
+
+## Task 4: Standard I/O Streams
+
+### Concept
+This task shows that OS provides two different streams i.e. `stdin and stdout`. It is a communication channel that OS provides to computer program so that it can send and receive data.
+
+>*stdin*: This is a input stream where a program reads data.
+>*stdout*: This is a output stream where a program writes data.
+
+### Commands
+```bash
+# Compile the source code
+gcc task4_input.c -o task4
+
+# Run the program
+./task4
+```
+
+### Evidences
+![input-output-stream](../Lecture-3/images/lab-5.png)
+
+As I have already explain enough about input and output streams above. So lets talk about the image above, where it asks for a name i.e. **stdin** and outputs it as a string i.e. **stdout**
