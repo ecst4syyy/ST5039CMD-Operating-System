@@ -46,5 +46,5 @@ Just look at the first image in this documentation. That's what our final execut
 `gcc one.c -o one`
 
 ## Author
-Student name - **Gaurav Poudel**
-Class - **Programming & Operating System**
+**Student name**: Gaurav Poudel <br>
+**Module**: Programming & Operating System

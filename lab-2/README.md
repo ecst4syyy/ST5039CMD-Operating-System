@@ -1,10 +1,13 @@
 # Lab 3 - Investigating Process Lifecycles and OS Interaction
  
-This lab contains the program files and understand how OS manages the process and resources in actual.
+This lab contains the program files, lab instructions, and notes on process lifecycle and OS interaction with the help of C program.
 
 ## Learning Objectives
-1. Understanding how OS keeps track of PIDs and PPIDs
-2. 
+1. Explain how OS keeps track of PIDs and PPIDs
+2. Analyze about exit codes and its importance
+3. Map the gap between high level C program and low level OS process management
+4. Demonstrate about input and output streams (stdin and stdout)
+
 
 ## Task 1: The Long Running Process
 
@@ -124,3 +127,7 @@ echo $?
 ![conditional-execution](../Lecture-3/images/lab-6.png)
 
 As it can noticed that when input `1` is passed, it does continue and return the exit code of `0` (success), in contrast, when the input is `anything other than 1` it simply exits and returns the exit code `1` (failure). This is how automated pipelines/script can be controlled based on user input and exit codes.
+
+## Author
+**Student Name**: Gaurav Poudel <br>
+**Module**: Programming and Operating System
