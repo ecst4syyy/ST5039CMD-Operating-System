@@ -5,6 +5,8 @@ In this lab, we will understand how a C program using multiple library functions
 
 ## Learning Objectives
 - Use multiple functions from different C standard libraries
+- Identify the difference between header file and precompiled machine code
+- Identify the difference between static linker and dynamic linker
 
 ## C Standard Library Usage
 ### Concept
@@ -101,3 +103,8 @@ readelf -h procinfo_dynamic
 
 ### Evidences
 ![readelf header](./images/lab-7.png)
+
+
+## Author
+**Student Name**: Gaurav Poudel<br>
+**Module**: Programming and Operating System
