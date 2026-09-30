@@ -45,6 +45,11 @@ In this task, we will have a look at the physical location of the C standard lib
 # list the header files
 ls -la /usr/include/stdio.h /usr/include/unistd.h /usr/include/stdlib.h
 
+# list the static library (location is based on architecture)
+ls -la /usr/lib/aarch64-linux-gnu/libc.a
+
+# list the shared library
+ls -la /lib/aarch64-linux-gnu/libc.so*
 ```
 
 ### Evidences
@@ -57,3 +62,30 @@ When we use these libraries such as `stdio.h`, `unistd.h`, and `stdlib.h`, etc. 
 ![static library location](./images/lab-4.png)
 
 Above are the physical location of static and shared library.
+
+## Static and Dynamic Linking
+### Concept
+**Linking** is the final step in compilation process, where external libraries used in our program are linked with our program to create it a runnable program. While static linking happens at the `compile time`, dynamic linking takes place during `run time`.
+
+### How Each Work
+- **Static Linking**: the linker (**ld**) copies the part of machine code (may be implementation for *getpid()*) to the program that is using it. **Things to note**: In this case, the program file is self-contained, but huge in size.
+
+- **Dynamic Linking**: the *dynamic linker* loads the actual code being used by the program into memory at **runtime**. So, *what does it mean?* It means that it doesn't have to copy the machine code into our program like it does in static linking, rather it just creates a `reference` to shared libraries.
+
+### Commands
+```bash
+# Compile the program using static linker
+gcc -static procinfo.c -o procinfo_static
+
+# list the program
+ls -ld procinfo_static
+```
+
+### Evidences
+![compile using static linking](./images/lab-5.png)
+
+Here the compiled file `procinfo_static` is the self-contained program file, all the function implementation and part of code from library have already been copied to this program.
+
+![dyamic linking at runtime](./images/lab-6.png)
+
+What we always have been doing till now was dynamic linking, **look at the size difference!!!**, its because it doesn't copies the machine code, rather it creates a references to the machine code in the memory.
