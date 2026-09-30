@@ -89,3 +89,15 @@ Here the compiled file `procinfo_static` is the self-contained program file, all
 ![dyamic linking at runtime](./images/lab-6.png)
 
 What we always have been doing till now was dynamic linking, **look at the size difference!!!**, its because it doesn't copies the machine code, rather it creates a references to the machine code in the memory.
+
+## Inspecting Executables with readelf
+### Concept
+
+### Commands
+```bash 
+# read the elf header
+readelf -h procinfo_dynamic
+```
+
+### Evidences
+![readelf header](./images/lab-7.png)
